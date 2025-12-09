@@ -1,0 +1,6 @@
+# Regex Golfer
+Inspired by a blog post by Peter Norvig: www.i-programmer.info/news/144-graphics-and-games/6828-regex-golf-xkcd-and-peter-norvig.html.
+
+Use regular expressions to match all of the words in the list on the left, but none of the words in the list on the right.
+
+Generating regular expressions to match a list of words is an example of the Set Cover problem, which is np-complete. Norvig’s implementation (and my own) use greedy approximation algorithms, which first generate a list of possible regular expressions, then iteratively pick the shortest expression that matches the most words until all words are covered. Due to being an approximation algorithm, it could produce a suboptimal solution, and in some cases multiple solutions may be possible.
